@@ -33,9 +33,7 @@ jobs:
         ./make_woff2src.sh 
         cp ./RepackedFonts/* ../WDBFontOverwrite/RepackedFonts/
         
-    - name: Upload
-      uses: actions/upload-artifact@v3
-         with:
-            path: ./RepackedFonts
-            name: Fonts
-
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Fonts
+        path: ${{ github.workspace }}/repackfonts/RepackedFonts
