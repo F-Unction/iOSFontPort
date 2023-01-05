@@ -17,7 +17,7 @@ jobs:
     - name: Build BrotliPadding.swift
       run: | 
         cd repackfonts
-        swiftc -o BrotliPadding.o BrotliPadding.swift
+        swiftc -o BrotliPadding BrotliPadding.swift
         
     - name: Set up Python
       uses: actions/setup-python@v3
