@@ -6,14 +6,8 @@ mkdir -p PreviewFonts XmlFonts XmlFontsRenamed RecompiledFonts RepackedFonts || 
 IFS="
 "
 fonts="
-OriginalFonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSansCondensed.ttf:DejaVuSansCondensed
-OriginalFonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSansMono.ttf:DejaVuSansMono
-OriginalFonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSerif.ttf:DejaVuSerif
-OriginalFonts/ChocoCooky/assets/fonts/Chococooky.ttf:Chococooky
-OriginalFonts/image/font/gofont/ttfs/Go-Regular.ttf:GoRegular
-OriginalFonts/image/font/gofont/ttfs/Go-Mono.ttf:GoMono
-OriginalFonts/Comic Sans MS.ttf:ComicSansMS
-OriginalFonts/segoeui.ttf:SegoeUI"
+OriginalFonts/ubuntu-font-family-0.83/UbuntuMono-R.ttf:UbuntuMono
+OriginalFonts/jetbrainsmono/JetBrainsMono-Regular.ttf:DejaVuSansMono"
 for fontandname in $fonts
 do
 	font="$(echo "$fontandname" | cut -d ":" -f 1)"
