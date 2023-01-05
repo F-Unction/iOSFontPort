@@ -1,0 +1,25 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Port
+
+on:
+   workflow_dispatch:
+
+jobs:
+  Port:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build BrotliPadding.swift
+      run: | 
+        cd repackfonts
+        xcrun swift -emit-executable -sdk $(xcrun --show-sdk-path --sdk macosx) BrotliPadding.swift
+        
+    - name: Run make_woff2src.sh
+      run: |
+        cd repackfonts
+        ./make_woff2src.sh 
+
