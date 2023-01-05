@@ -16,7 +16,7 @@ jobs:
     - name: Build BrotliPadding.swift
       run: | 
         cd repackfonts
-        xcrun cswift -emit-executable -sdk $(xcrun --show-sdk-path --sdk macosx) BrotliPadding.swift
+        swiftc -o BrotliPadding.o BrotliPadding.swift
         
     - name: Run make_woff2src.sh
       run: |
