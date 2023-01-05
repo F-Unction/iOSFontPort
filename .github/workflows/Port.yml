@@ -13,13 +13,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
     - name: Build BrotliPadding.swift
       run: | 
         cd repackfonts
         swiftc -o BrotliPadding.o BrotliPadding.swift
         
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+        
     - name: Install fonttools
-      run: pip install fonttools
+      run: python -m pip install fonttools
         
     - name: Run make_woff2src.sh
       run: |
