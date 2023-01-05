@@ -54,6 +54,16 @@ extension ContentView {
         
         let fonts = [
             FontToReplace(
+                name: "jetbrainsmono",
+                postScriptName: "JetBrainsMono",
+                repackedPath: "JetBrainsMono-Regular.woff2"
+            ),
+            FontToReplace(
+                name: "Ubuntu Mono",
+                postScriptName: "UbuntuMono",
+                repackedPath: "UbuntuMono-R.woff2"
+            ),
+            FontToReplace(
                 name: "DejaVu Sans Condensed",
                 postScriptName: "DejaVuSansCondensed",
                 repackedPath: "DejaVuSansCondensed.woff2"
