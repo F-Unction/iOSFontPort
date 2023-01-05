@@ -7,7 +7,7 @@ IFS="
 "
 fonts="
 OriginalFonts/ubuntu-font-family-0.83/UbuntuMono-R.ttf:UbuntuMono
-OriginalFonts/jetbrainsmono/JetBrainsMono-Regular.ttf:DejaVuSansMono"
+OriginalFonts/jetbrainsmono/JetBrainsMono-Regular.ttf:JetBrainsMono"
 for fontandname in $fonts
 do
 	font="$(echo "$fontandname" | cut -d ":" -f 1)"
