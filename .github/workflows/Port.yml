@@ -18,6 +18,9 @@ jobs:
         cd repackfonts
         swiftc -o BrotliPadding.o BrotliPadding.swift
         
+    - name: Install fonttools
+      run: pip install fonttools
+        
     - name: Run make_woff2src.sh
       run: |
         cd repackfonts
